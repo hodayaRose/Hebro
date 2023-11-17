@@ -1,0 +1,304 @@
+# Xcode
+.DS_Store
+*.xcuserstate
+project.xcworkspace
+xcuserdata/
+*.xcscmblueprint
+*.pbxuser
+!default.pbxuser
+*.perspectivev3
+!default.perspectivev3
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.moved-aside
+derivedData/
+*.hmap
+*.ipa
+/*.xcworkspace
+*.xcworkspacedata
+!default.xcworkspacedata
+*.xcuserdatad
+!default.xccheckout
+*.xcscheme
+!default.xcscheme
+xcshareddata/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build
+
+# Swift PM
+.build/
+Packages/
+Package.resolved
+.swiftpm/xcode/package.xcworkspace
+.swiftpm/xcode/xcuserdata/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Python
+*.py[cod]
+*.so
+.Python
+__pycache__/
+
+# Profile
+*.moved-aside
+*.pyc
+*.syncinfo
+*.swp
+*~.nib
+*.lock
+profile
+
+# Android Studio
+*.iml
+.idea/
+.gradle
+local.properties
+/.idea/caches
+/.idea/libraries
+# Xcode
+.DS_Store
+*.xcuserstate
+project.xcworkspace
+xcuserdata/
+*.xcscmblueprint
+*.pbxuser
+!default.pbxuser
+*.perspectivev3
+!default.perspectivev3
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.moved-aside
+derivedData/
+*.hmap
+*.ipa
+/*.xcworkspace
+*.xcworkspacedata
+!default.xcworkspacedata
+*.xcuserdatad
+!default.xccheckout
+*.xcscheme
+!default.xcscheme
+xcshareddata/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build
+
+# Swift PM
+.build/
+Packages/
+Package.resolved
+.swiftpm/xcode/package.xcworkspace
+.swiftpm/xcode/xcuserdata/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Python
+*.py[cod]
+*.so
+.Python
+__pycache__/
+
+# Profile
+*.moved-aside
+*.pyc
+*.syncinfo
+*.swp
+*~.nib
+*.lock
+profile
+
+# Android Studio
+*.iml
+.idea/
+.gradle
+local.properties
+/.idea/caches
+/.idea/libraries
+# Xcode
+.DS_Store
+*.xcuserstate
+project.xcworkspace
+xcuserdata/
+*.xcscmblueprint
+*.pbxuser
+!default.pbxuser
+*.perspectivev3
+!default.perspectivev3
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.moved-aside
+derivedData/
+*.hmap
+*.ipa
+/*.xcworkspace
+*.xcworkspacedata
+!default.xcworkspacedata
+*.xcuserdatad
+!default.xccheckout
+*.xcscheme
+!default.xcscheme
+xcshareddata/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build
+
+# Swift PM
+.build/
+Packages/
+Package.resolved
+.swiftpm/xcode/package.xcworkspace
+.swiftpm/xcode/xcuserdata/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Python
+*.py[cod]
+*.so
+.Python
+__pycache__/
+
+# Profile
+*.moved-aside
+*.pyc
+*.syncinfo
+*.swp
+*~.nib
+*.lock
+profile
+
+# Android Studio
+*.iml
+.idea/
+.gradle
+local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/.idea/dictionaries
+/.idea/shelf
+
+# Custom files to ignore
+S.swift
+GoogleService-Info.plist
+Info.plist
+Hebro.entitlements
+
+
+
