@@ -9,7 +9,7 @@
 
 import SwiftUI
 struct PaymentSuccessView: View {
-    @EnvironmentObject var paymentManager: PaymentManager
+    @ObservedObject var paymentManager: PaymentManager
     
     
     // Computed property to determine whether to show the success view
@@ -63,13 +63,6 @@ struct PaymentSuccessView: View {
             
 
         }
-    }
-}
-
-struct PaymentSuccessView_Previews: PreviewProvider {
-    static var previews: some View {
-        PaymentSuccessView()
-            .environmentObject(PaymentManager())
     }
 }
 

@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-//this view is the update list view that renders when user press update "bell" botton in homeView
+
+///this view is the update list view that renders when user press update "bell" botton in homeView
 
 struct UpdateList: View {
-    @ObservedObject var notificationManager : NotificationManager
+    @ObservedObject var notificationManager = NotificationManager()
     
-    //adds an update to Updates view
+    
     
     
     var body: some View {

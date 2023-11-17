@@ -15,7 +15,7 @@ struct TabBar: View {
                 Image(systemName: "play.circle.fill")
                 Text("Home")
             }
-            CourseList().tabItem {
+            AccountView().tabItem {
                 Image(systemName: "rectangle.stack.fill")
                 Text("Courses")
             }

@@ -6,7 +6,7 @@
 //
 //This view will be displayed when user presed the login button in the LoginView
 import SwiftUI
-
+///successView renders after user is logged in.
 struct SuccessView: View {
     @State var show = false
     

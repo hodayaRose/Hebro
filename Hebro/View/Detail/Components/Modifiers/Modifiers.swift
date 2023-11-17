@@ -110,3 +110,18 @@ func getAngleMultiplier(bounds: GeometryProxy) -> Double {
     }
 }
 
+// MARK: - FontModifierRing
+struct FontModifierRing: ViewModifier {
+    var style: Font.TextStyle = .body
+    func body(content: Content) -> some View {
+        content
+            .font(.system(style, design: .default))
+    }
+}
+
+// MARK: - ShadowModifierRing
+struct ShadowModifierRing: ViewModifier {
+    func body(content: Content) -> some View {
+        content.shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 10)
+    }
+}

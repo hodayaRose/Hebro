@@ -9,18 +9,20 @@ import SwiftUI
 
 // MARK: - WatchringsView
 struct WatchringsView: View {
-    @State var colors = [UIColor(red: 255/255, green: 95/255, blue: 109/255, alpha: 1),
+    @State private var colors = [UIColor(red: 255/255, green: 95/255, blue: 109/255, alpha: 1),
                          UIColor(red: 255/255, green: 195/255, blue: 113/255, alpha: 1),
                          UIColor(red: 0.5098, green: 0.9569, blue: 0.6941, alpha: 1.0),
                          UIColor(red: 0.1882, green: 0.7765, blue: 0.4863, alpha: 1.0),
                          UIColor(red: 0.9843, green: 0.8157, blue: 0.4863, alpha: 1.0),
                          UIColor(red: 0.9686, green: 0.9686, blue: 0.4745, alpha: 1.0)]
     var body: some View {
+     
         HStack(spacing: 30) {
             RingSection(color1: colors[0],color2: colors[1] ,width: 44, height: 44, percent: 68, label: ("6 minutes left", "Tap to reveal your Certificate"))
             RingSection(color1: colors[2],color2: colors[3],width: 32, height: 32, percent: 54)
             RingSection(color1: colors[4],color2: colors[5],width: 32, height: 32, percent: 23)
         }
+  
     }
 }
 
@@ -60,21 +62,6 @@ struct RingSection: View {
     }
 }
 
-// MARK: - FontModifierRing
-struct FontModifierRing: ViewModifier {
-    var style: Font.TextStyle = .body
-    func body(content: Content) -> some View {
-        content
-            .font(.system(style, design: .default))
-    }
-}
-
-// MARK: - ShadowModifierRing
-struct ShadowModifierRing: ViewModifier {
-    func body(content: Content) -> some View {
-        content.shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 10)
-    }
-}
 
 // MARK: - Previews
 #Preview {

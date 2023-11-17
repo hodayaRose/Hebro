@@ -17,54 +17,62 @@ struct AccountView: View {
     @EnvironmentObject var databaseService : DatabaseManager
     
     var body: some View {
-        NavigationView {
-            List {
-                Section {
-                    profile
-                }
-                
-                Section {
-                    
-                    NavigationLink {} label: {
-                        Label("Settings", systemImage: "gear")
+        GeometryReader { geometry in
+            NavigationView {
+                List {
+                    Section {
+                        profile
                     }
                     
-                    NavigationLink {} label: {
-                        Label("Billing", systemImage: "creditcard")
+                    Section {
+                        
+                        NavigationLink {} label: {
+                            Label("Settings", systemImage: "gear")
+                        }
+                        
+                        NavigationLink {} label: {
+                            Label("Billing", systemImage: "creditcard")
+                        }
+                        
+                        NavigationLink {} label: {
+                            Label("Help", systemImage: "questionmark.circle")
+                        }
+                    }
+                    .foregroundColor(.black.opacity(0.75))
+                    .listRowSeparator(.automatic)
+                    
+                    Section {
+                        Toggle(isOn: $isLiteMode) {
+                            Label("Lite Mode", systemImage: isLiteMode ? "tortoise" : "hare")
+                                .tint(.black.opacity(0.75))
+                                .foregroundColor(.black.opacity(0.75))
+                        }
                     }
                     
-                    NavigationLink {} label: {
-                        Label("Help", systemImage: "questionmark.circle")
-                    }
+                    linksSection
+                    
+                    
                 }
-                .foregroundColor(.black.opacity(0.75))
-                .listRowSeparator(.automatic)
-                
-                Section {
-                    Toggle(isOn: $isLiteMode) {
-                        Label("Lite Mode", systemImage: isLiteMode ? "tortoise" : "hare")
-                            .tint(.black.opacity(0.75))
-                            .foregroundColor(.black.opacity(0.75))
-                    }
+                .listStyle(.insetGrouped)
+                .navigationTitle("Account")
+                .task {
+                    //fetches a random address
+                    await fetchAddress()
+                    
                 }
-                
-                linksSection
-                
-              
+                .refreshable {
+                    //when refresh fetches another random address
+                    await fetchAddress()
+                    
+                }
             }
-            .listStyle(.insetGrouped)
-            .navigationTitle("Account")
-            .task {
-                //fetches a random address
-                await fetchAddress()
-            
-            }
-            .refreshable {
-                //when refresh fetches another random address
-                await fetchAddress()
-          
-            }
+            // Apply rotation if needed for landscape mode
+                        .rotationEffect(.init(degrees: isLandscape(geometry) ? -90 : 0))
+            // Swap width and height if in landscape mode
+            .frame(width: isLandscape(geometry) ? geometry.size.height : geometry.size.width,
+                   height: isLandscape(geometry) ? geometry.size.width : geometry.size.height)
         }
+        
     }
     
 
@@ -72,7 +80,7 @@ struct AccountView: View {
     var linksSection: some View {
         Section {
             if !isDeleted {
-                Link(destination: URL(string: "https://www.linkedin.com/in/hodaya-rosenberg/")! ) {
+                Link(destination: URL(string: S.API.linkedIn)! ) {
                     HStack {
                         Label("Website", systemImage: "house")
                             .tint(.black.opacity(0.75))
@@ -137,7 +145,7 @@ struct AccountView: View {
     
     func fetchAddress() async {
         do {
-            let url = URL(string: K.API.randomAddress)!
+            let url = URL(string: S.API.randomAddress)!
             let (data, _) = try await URLSession.shared.data(from: url)
             address = try JSONDecoder().decode(Address.self, from: data)
         } catch {
@@ -145,14 +153,10 @@ struct AccountView: View {
         }
     }
 }
-
-//struct AccountView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AccountView( userName: $userName)
-//    }
-//}
-
-struct Address: Identifiable, Decodable {
-    var id: Int
-    var country: String
+/// Function to determine if the device is in landscape mode 
+ func isLandscape(_ geometry: GeometryProxy) -> Bool {
+    geometry.size.width > geometry.size.height
 }
+
+
+

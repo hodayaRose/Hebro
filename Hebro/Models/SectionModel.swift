@@ -18,9 +18,9 @@ struct SectionModel: Identifiable{
 }
 
 let sectionData = [
-    SectionModel(title: "Bring Hebrew Home ", text: "AR Game ", logo: K.Images.logoCircle, image: Image(K.Images.Card1), color: Color("card1")),
-    SectionModel(title: "Color Your Words", text: "Coloring Book", logo: K.Images.logoCircle, image: Image("Card3"), color:Color("card3") ),
-    SectionModel(title: "Its Story Time!", text: "story telling in hebrew", logo: K.Images.logoCircle, image: Image("Card1"), color: Color("card2"))
+    SectionModel(title: K.Sections.title1, text: K.Sections.text1, logo: K.Images.logoCircle, image: Image(K.Images.Card1), color: Color("card1")),
+    SectionModel(title: K.Sections.title2, text: K.Sections.text2, logo: K.Images.logoCircle, image: Image(K.Images.Card3), color:Color("card3") ),
+    SectionModel(title: K.Sections.title3, text: K.Sections.text3, logo: K.Images.logoCircle, image: Image(K.Images.Card1), color: Color("card2"))
 ]
 
 

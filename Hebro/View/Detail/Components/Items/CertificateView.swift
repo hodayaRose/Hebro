@@ -22,7 +22,7 @@ struct CertificateView: View {
     @EnvironmentObject var databaseService : DatabaseManager
     var body: some View {
         ZStack{
-            //Background view
+            ///Background view
             
             TitleView()
                 .blur(radius: show ? 20 : 0)
@@ -91,9 +91,9 @@ struct CertificateView: View {
                     
                     
                 }
-            //drage gesture activates drage effect
+            ///drage gesture activates drage effect
                 .gesture(
-                    //every drag value is being stored in viewsState
+                    ///every drag value is being stored in viewsState
                     
                     DragGesture().onChanged { value in
                         withAnimation(.spring(response: 0.3,dampingFraction: 0.6, blendDuration: 0)){
@@ -104,7 +104,7 @@ struct CertificateView: View {
                     
                     
                         .onEnded({ value in
-                            // when drag released the position is set to 0
+                            /// when drag released the position is set to 0 the view return to its original position.
                             withAnimation(.spring(response: 0.3,dampingFraction: 0.6, blendDuration: 0)){
                                 self.viewState = .zero
                                 self.show = false
@@ -112,7 +112,7 @@ struct CertificateView: View {
                         })
                     
                 )
-            // BottomCardView will be displayed when CardView is pressed and its size ajdusts dinamically
+            /// BottomCardView will be displayed when CardView is pressed and its size ajdusts dinamically
             GeometryReader { bounds in
                 BottomCardView(show: $showCard)
                     .offset(x: 0, y:   withAnimation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8)) {showCard ? bounds.size.height / 2 : bounds.size.height

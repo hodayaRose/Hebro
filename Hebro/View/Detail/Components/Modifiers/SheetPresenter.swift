@@ -9,9 +9,7 @@ import SwiftUI
 import ARKit
 import RealityKit
 import PencilKit
-enum ActiveSheet {
-    case arGameView ,drawingView, none
-}
+
 struct SheetPresenter: ViewModifier {
     @Binding var activeSheet: ActiveSheet
     @Binding var arView: ARView
@@ -35,7 +33,8 @@ struct SheetPresenter: ViewModifier {
                        ColoringBookController(drawing: $drawing, activeSheet: $activeSheet, tool: $tool, showDrawingView: $showDrawingView)
                     
                    case .none:
-                       HomeViewController(showProfile: $showProfile, showContent: $showContent, viewState: $viewState)
+                       
+                       HomeView(showProfile: $showProfile, showContent: $showContent, viewState: $viewState)
                    }
                }
     }

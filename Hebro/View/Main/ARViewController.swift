@@ -27,14 +27,15 @@ struct ARViewController: View {
                         
                     }
                     .edgesIgnoringSafeArea(.all)
-                // Ignore safe area for AR view
+                /// overlay scroll view with 3d models preview
                     .overlay {
                         ScrollViewARModels(arView: $arView, modelNames: $modelNames, selectedModel: $selectedModel, isModelTapped: $isModelTapped )
                             .padding() // Add padding around the ScrollView
                             .background(.white.opacity(0.5)) // Add a background color
                             .position(x: geometry.size.width / 2, y: geometry.size.height - 50) // Position at the bottom
                     }
-                //text label overlay
+                 
+                ///text label overlay
                     .overlay(
                         VStack {
                             Text( isModelTapped ? "tap the \(selectedModel) to listen in Hebrew":"Tap an item to start exploring")
@@ -94,6 +95,4 @@ struct ARViewController: View {
 
 
 
-//#Preview {
-//    ARViewController()
-//}
+

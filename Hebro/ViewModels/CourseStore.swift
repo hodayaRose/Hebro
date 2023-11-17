@@ -9,7 +9,7 @@ import SwiftUI
 import Contentful
 
 
-let client = Client(spaceId: K.contentful.spaceId , accessToken: K.contentful.accessToken )
+let client = Client(spaceId: S.contentful.spaceId , accessToken: S.contentful.accessToken )
 
 func getArray(id: String, completion: @escaping([Entry]) -> ()) {
     let query = Query.where(contentTypeId: id)
@@ -27,7 +27,7 @@ func getArray(id: String, completion: @escaping([Entry]) -> ()) {
         }
     }
 }
-//data returned from contentful API
+///data returned from contentful API
 class CourseStore: ObservableObject{
     
     @Published  var courses: [Course] = []
@@ -49,7 +49,7 @@ class CourseStore: ObservableObject{
                         subtitle: item.fields["subtitle"] as! String,
                         image: item.fields.linkedAsset(at: "image")?.url ?? URL(string: "")!,
                         logo: UIImage(named: "logocircleB")!,
-                        //generating randon card background color
+                        ///generating randon card background color
                         color: colors[currentIndex % colors.count]! ,
                         
                         show: item.fields["show"] as! Bool,
@@ -57,7 +57,7 @@ class CourseStore: ObservableObject{
                         headline: item.fields["headline"] as! String,
                         content: item.fields["content"] as! String
                     ))
-                //i++ for Color to get next color in colors[]
+                ///i++ for Color to get next color in colors[]
                 currentIndex = (currentIndex + 1) % colors.count
                 
             }

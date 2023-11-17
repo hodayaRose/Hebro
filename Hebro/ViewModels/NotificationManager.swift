@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-///UpdateModel 
+///UpdateModel
 class NotificationManager: ObservableObject {
     @Published var data: [String] = [] // Example property
      func addUpdate(){

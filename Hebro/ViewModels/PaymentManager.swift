@@ -16,7 +16,7 @@ class PaymentManager: ObservableObject {
     @Published var paymentSuccess = false
     
     
-    // Call the startPayment function from the PaymentHandler. In the completion handler, set the paymentSuccess variable
+    /// Call the startPayment function from the PaymentHandler. In the completion handler, set the paymentSuccess variable
     func pay() {
         paymentHandler.startPayment(products: products, total: total) { success in
             self.paymentSuccess = success

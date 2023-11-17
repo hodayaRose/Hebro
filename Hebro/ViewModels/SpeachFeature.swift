@@ -7,7 +7,7 @@
 
 import SwiftUI
 import AVFoundation
-//uses voiceover to use a synthetic voice and pronounce a randome letter from array
+///uses voiceover to use a synthetic voice and pronounce a randome letter from array
 struct SpeachFeature: View {
     let synthesizer = AVSpeechSynthesizer()
     let hebrewLetters = ["א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י", "כ", "ל","מ", "נ", "ס", "ע", "פ", "צ", "ק", "ר", "ש","ת"]
@@ -29,10 +29,10 @@ struct SpeachFeature: View {
     }
     func pronunciationOfWord(_ word: String) {
         if let hebrewWord = wordSelected[word] ,AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.he-IL.Carmit") != nil{
-            let hebrewVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language == "he-IL" }
-            for voice in hebrewVoices {
-                print(voice.name, voice.identifier)
-            }
+//            let hebrewVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language == "he-IL" }
+//            for voice in hebrewVoices {
+//                print(voice.name, voice.identifier)
+//            }
             let utterance = AVSpeechUtterance(string: hebrewWord)
             utterance.voice = AVSpeechSynthesisVoice(language: "he-IL")
             utterance.rate = 0.3

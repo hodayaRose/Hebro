@@ -49,7 +49,7 @@ struct ToolPicker: UIViewRepresentable {
     }
     
     func updateUIView(_ canvasView: PKCanvasView, context: Context) {
-        if let canvasView = canvasView as? PKCanvasView {
+        if let canvasView = canvasView as? PKCanvasView  {
             toolPicker.setVisible(true, forFirstResponder: canvasView)
             toolPicker.addObserver(context.coordinator)
             canvasView.becomeFirstResponder()
