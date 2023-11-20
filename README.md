@@ -1,6 +1,6 @@
 
 # Hebro
-![Hebro Logo](path/to/directory/hebro.svg)
+![Hebro Logo](hebro.svg)
 
 ## Project Overview
 
