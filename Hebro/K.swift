@@ -22,7 +22,7 @@ struct K {
         static let secondary = Color("secondarys")
         
         
-      
+        
     }
     //SectionData
     struct Sections {
@@ -50,7 +50,7 @@ struct K {
         static let dog = "pawprint.fill"
         static let airplane = "airplane"
         static let glasses = "eyeglasses"
-       
+        
         
         
         
@@ -59,7 +59,7 @@ struct K {
         //profile picture
         static let Avatar = "Avatar"
         
-       
+        
     }
     struct lottieFile {
         static let success = "success"
@@ -67,7 +67,7 @@ struct K {
         
     }
     
-
+    
     
     // Other Constants
     static let appName = "My SwiftUI App"
@@ -79,22 +79,25 @@ struct K {
     static let BottomCardViewText = "text describtion about the course that expends by the texts length"
     
     
-  ///Struct  S has to be defined to full personilized experience with this app
+    ///Struct  S has to be defined to full personilized experience with this app
     ///i addition youll need to add a ggogleservice.plist and plist
-//    struct S {
-//        struct contentful {
-//            static let spaceId = {$(contentul spaceId)}
-//            static let accessToken = {$(contentul ACCESSTOKEN)}
-//        }
-//        
-//        // API Endpoints
-//        struct API {
-//            static  let baseURL = "https://api.example.com"
-//            static  let loginEndpoint = "/login"
-//            static  let randomAddress = "https://random-data-api.com/api/address/random_address"
-//            static  let linkedIn = "YOUR_LINKEDIN_URL"
-//        }
-//    }
+    //    struct S {
+    //        struct contentful {
+    //            static let spaceId = {$(contentul spaceId)}
+    //            static let accessToken = {$(contentul ACCESSTOKEN)}
+    //        }
+    //
+    //        // API Endpoints
+    //        struct API {
+    //            static  let baseURL = "https://api.example.com"
+    //            static  let loginEndpoint = "/login"
+    //            static  let randomAddress = "https://random-data-api.com/api/address/random_address"
+    //            static  let linkedIn = "YOUR_LINKEDIN_URL"
+    //              struct Merchant {
+    //               static let id = "merchant.com.YOUR_MERCHANT"
+    //  }
+    //        }
+    //    }
     
 }
 

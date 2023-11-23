@@ -69,7 +69,7 @@ class PaymentHandler: NSObject {
         // Create a payment request and add all data to it
         let paymentRequest = PKPaymentRequest()
         paymentRequest.paymentSummaryItems = paymentSummaryItems // Set paymentSummaryItems to the paymentRequest
-        paymentRequest.merchantIdentifier = "merchant.com.hodayaR.Hebro"
+        paymentRequest.merchantIdentifier = S.Merchant.id
         paymentRequest.merchantCapabilities = .threeDSecure // A security protocol used to authenticate users
         paymentRequest.countryCode = "US"
         paymentRequest.currencyCode = "USD"
